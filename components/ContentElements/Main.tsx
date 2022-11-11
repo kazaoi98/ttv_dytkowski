@@ -76,7 +76,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
                   <div className='transition-transform duration-[0.3s] ease-in h-[30rem]'>
                     <div className='relative overflow-hidden shadow-[0_6px_16px_rgba(0,0,0,.5),0_0px_4px_rgba(0,0,0,.4)] bg-[#451093] w-full h-full'>
                       <div data-test-selector="featured-item-no-video-wrapper" className='opacity-100 transition-opacity duration-[0.3s] ease-in absolute inset-0 bg-[rgba(0,0,0,.6)] text-white'>
-                        <iframe src="https://player.twitch.tv/?channel=caedrel&parent=localhost:3000" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
+                        <iframe src="https://player.twitch.tv/?channel=moonmoon&parent=ttv-dytkowski.vercel.app" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
                       </div>
                       <img alt="hello friends, we crafting all the weapons" className='w-full h-full border-none max-w-full align-top' src="https://static-cdn.jtvnw.net/previews-ttv/live_user_ninjy-440x248.jpg"></img>
                     </div>
@@ -89,7 +89,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
                   <div className='transition-transform duration-[0.3s] ease-in h-[30rem]'>
                     <div className='relative overflow-hidden shadow-[0_6px_16px_rgba(0,0,0,.5),0_0px_4px_rgba(0,0,0,.4)] bg-[#451093] w-full h-full'>
                       <div data-test-selector="featured-item-no-video-wrapper" className='opacity-50 transition-opacity duration-[0.3s] ease-in absolute inset-0 bg-[rgba(0,0,0,.6)] text-white'>
-                        <iframe src="https://player.twitch.tv/?channel=caedrel&parent=localhost:3000" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
+                        <iframe src="https://player.twitch.tv/?channel=moonmoon&parent=ttv-dytkowski.vercel.app" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
                       </div>
                       <img alt="hello friends, we crafting all the weapons" className='w-full h-full border-none max-w-full align-top' src="https://static-cdn.jtvnw.net/previews-ttv/live_user_ninjy-440x248.jpg"></img>
                     </div>
@@ -102,7 +102,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
                   <div className='h-[30rem]'>
                     <div className='relative overflow-hidden shadow-[0_6px_16px_rgba(0,0,0,.5),0_0px_4px_rgba(0,0,0,.4)] bg-[#451093] w-full h-full'>
                       <div data-test-selector="featured-item-no-video-wrapper" className='transition-opacity duration-[0.3s] ease-in absolute inset-0 bg-[rgba(0,0,0,.6)] text-white'>
-                        <iframe src="https://player.twitch.tv/?channel=caedrel&parent=localhost:3000" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
+                        <iframe src="https://player.twitch.tv/?channel=moonmoon&parent=ttv-dytkowski.vercel.app" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
                       </div>
 
                       <div className="absolute top-0 left-0 ml-4 mt-4 z-10">
@@ -122,7 +122,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
                   <div className='transition-transform duration-[0.3s] ease-in h-[30rem]'>
                     <div className='relative overflow-hidden shadow-[0_6px_16px_rgba(0,0,0,.5),0_0px_4px_rgba(0,0,0,.4)] bg-[#451093] w-full h-full'>
                       <div data-test-selector="featured-item-no-video-wrapper" className='opacity-50 transition-opacity duration-[0.3s] ease-in absolute inset-0 bg-[rgba(0,0,0,.6)] text-white'>
-                        <iframe src="https://player.twitch.tv/?channel=caedrel&parent=localhost:3000" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
+                        <iframe src="https://player.twitch.tv/?channel=moonmoon&parent=ttv-dytkowski.vercel.app" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
                       </div>
                       <img alt="hello friends, we crafting all the weapons" className='w-full h-full border-none max-w-full align-top' src="https://static-cdn.jtvnw.net/previews-ttv/live_user_ninjy-440x248.jpg"></img>
                     </div>
@@ -135,7 +135,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
                   <div className='transition-transform duration-[0.3s] ease-in h-[30rem]'>
                     <div className='relative overflow-hidden shadow-[0_6px_16px_rgba(0,0,0,.5),0_0px_4px_rgba(0,0,0,.4)] bg-[#451093] w-full h-full'>
                       <div data-test-selector="featured-item-no-video-wrapper" className='opacity-100 transition-opacity duration-[0.3s] ease-in absolute inset-0 bg-[rgba(0,0,0,.6)] text-white'>
-                        <iframe src="https://player.twitch.tv/?channel=caedrel&parent=localhost:3000" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
+                        <iframe src="https://player.twitch.tv/?channel=moonmoon&parent=ttv-dytkowski.vercel.app" frameBorder="0" allowFullScreen={true} scrolling="no" height="300" width="530"></iframe>
                       </div>
                       <img alt="hello friends, we crafting all the weapons" className='w-full h-full border-none max-w-full align-top' src="https://static-cdn.jtvnw.net/previews-ttv/live_user_ninjy-440x248.jpg"></img>
                     </div>
