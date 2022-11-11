@@ -80,7 +80,7 @@ export default async function RootLayout({
                 <title>Next.js Twitch.tv clone</title>
             </head>
             <body className='bg-[#0e0e10] box-border h-full w-full'>
-                <div className='overflow-hidden flex flex-col flex-nowrap inset-0'>
+                <div className='overflow-hidden flex flex-col flex-nowrap inset-0 h-full'>
                     <div className='flex flex-col flex-nowrap h-full'>
                         <Header />
                         <div className='flex flex-nowrap relative overflow-hidden h-full'>
@@ -88,7 +88,7 @@ export default async function RootLayout({
                             {/* <Content topGames={topGames} streams={streams} users={users} /> */}
                             <main className='overflow-hidden relative flex-grow w-full h-full flex flex-col z-[1]'>
                                 <header className='block'></header>
-                                <div className='max-h-[919.49px] overflow-x-hidden  '>
+                                <div className='max-h-full overflow-x-hidden  '>
                                     <div className='pr-[17px] mb-0 pb-0 max-h-[inherit] box-content min-w-full overflow-x-hidden overflow-y-scroll'>
                                         <div className='mr-[-17px] mb-0 pb-0 overflow-x-hidden flex box-border min-h-full overflow-y-hidden'>
                                             <div className='relative w-full'>
