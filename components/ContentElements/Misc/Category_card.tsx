@@ -1,9 +1,5 @@
 import React from 'react'
 
-type Props = {
-    value: number;
-}
-
 const data = [
     { name: "Gry", src: "https://static.twitchcdn.net/assets/gaming-e9019587744b56b11b43.svg" },
     { name: "IRL", src: "https://static.twitchcdn.net/assets/irl-baa32e8e64a6974282c0.svg" },
@@ -13,11 +9,11 @@ const data = [
 
 ]
 
-export default function Category_card({ value }: Props) {
+export default function Category_card({ }: any) {
     return <>{
 
         data.map((categoryData) => (
-
+            
             <div className='border-[2px] border-solid border-transparent rounded-[10px] p-[2px] mb-4' key={categoryData.name}>
                 <div className='[background-position-x:100%] [background-position-y:100%] bg-no-repeat bg-contain text-white rounded-[0.6rem] bg-[#772ce8]'>
                     <a className='hover:bg-[hsla(0,0%,100%,.2)] hover:text-inherit   rounded-[0.6rem] block w-full text-inherit no-underline' href='#'>

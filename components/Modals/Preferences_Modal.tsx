@@ -37,7 +37,7 @@ export default function Preferences_Modal({ open }: Props) {
                                                                                             <div className="pb-[100%]"></div>
                                                                                             <svg width="100%" height="100%" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" className="absolute left-0 w-full min-h-full top-0 fill-current">
                                                                                                 <g>
-                                                                                                    <path fillRule="evenodd" d="M10 2c4.415 0 8 3.585 8 8s-3.585 8-8 8-8-3.585-8-8 3.585-8 8-8zm5.917 9a6.015 6.015 0 01-3.584 4.529A10 10 0 0013.95 11h1.967zm0-2a6.015 6.015 0 00-3.584-4.529A10 10 0 0113.95 9h1.967zm-3.98 0A8.002 8.002 0 0010 4.708 8.002 8.002 0 008.063 9h3.874zm-3.874 2A8.002 8.002 0 0010 15.292 8.002 8.002 0 0011.937 11H8.063zM6.05 11a10 10 0 001.617 4.529A6.014 6.014 0 014.083 11H6.05zm0-2a10 10 0 011.617-4.529A6.014 6.014 0 004.083 9H6.05z" clip-rule="evenodd"></path>
+                                                                                                    <path fillRule="evenodd" d="M10 2c4.415 0 8 3.585 8 8s-3.585 8-8 8-8-3.585-8-8 3.585-8 8-8zm5.917 9a6.015 6.015 0 01-3.584 4.529A10 10 0 0013.95 11h1.967zm0-2a6.015 6.015 0 00-3.584-4.529A10 10 0 0113.95 9h1.967zm-3.98 0A8.002 8.002 0 0010 4.708 8.002 8.002 0 008.063 9h3.874zm-3.874 2A8.002 8.002 0 0010 15.292 8.002 8.002 0 0011.937 11H8.063zM6.05 11a10 10 0 001.617 4.529A6.014 6.014 0 014.083 11H6.05zm0-2a10 10 0 011.617-4.529A6.014 6.014 0 004.083 9H6.05z" clipRule="evenodd"></path>
                                                                                                 </g>
                                                                                             </svg>
                                                                                         </div>
@@ -66,7 +66,7 @@ export default function Preferences_Modal({ open }: Props) {
                                                                                             <div className="pb-[100%]"></div>
                                                                                             <svg width="100%" height="100%" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" className="absolute left-0 w-full min-h-full top-0 fill-current">
                                                                                                 <g>
-                                                                                                    <path fillRule="evenodd" d="M8.614 2.134a8.001 8.001 0 001.388 15.879 8.003 8.003 0 007.884-6.635 6.947 6.947 0 01-2.884.62 7.004 7.004 0 01-6.388-9.864zM6.017 5.529a5.989 5.989 0 00-2.015 4.484c0 3.311 2.69 6 6 6a5.99 5.99 0 004.495-2.028 9.006 9.006 0 01-8.48-8.456z" clip-rule="evenodd"></path>
+                                                                                                    <path fillRule="evenodd" d="M8.614 2.134a8.001 8.001 0 001.388 15.879 8.003 8.003 0 007.884-6.635 6.947 6.947 0 01-2.884.62 7.004 7.004 0 01-6.388-9.864zM6.017 5.529a5.989 5.989 0 00-2.015 4.484c0 3.311 2.69 6 6 6a5.99 5.99 0 004.495-2.028 9.006 9.006 0 01-8.48-8.456z" clipRule="evenodd"></path>
                                                                                                 </g>
                                                                                             </svg>
                                                                                         </div>
@@ -101,6 +101,6 @@ export default function Preferences_Modal({ open }: Props) {
                 </div>
             </div>
         </>,
-        document.getElementById('preferences_portal')
+        document.getElementById('preferences_portal')!
     )
 }

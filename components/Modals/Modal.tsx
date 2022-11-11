@@ -151,6 +151,6 @@ export default function LoginModal({ open }: Props) {
         </div>
       </div>
     </>,
-    document.getElementById('portal')
+    document.getElementById('portal')!
   )
 }

@@ -1,56 +1,57 @@
-'use client';
 
-import React, { useEffect, useState } from 'react'
-import Tags from './Tags';
+import Link from 'next/link';
+import React from 'react'
 
-export const posters = [
-  { category: "Rozmowy", image: "https://static-cdn.jtvnw.net/ttv-boxart/509658-188x250.jpg", tags: ["IRL"] },
-  { category: "League of Legends", image: "https://static-cdn.jtvnw.net/ttv-boxart/21779-188x250.jpg", tags: ["MOBA", "Akcja"] },
-  { category: "Fifa 23", image: "https://static-cdn.jtvnw.net/ttv-boxart/1745202732_IGDB-188x250.jpg", tags: ["Sportowa"] },
-  { category: "Grand Theft Auto V", image: "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-188x250.jpg", tags: ["Gra przygodowa"] },
-  { category: "Counter Strike: Global Offensive", image: "https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-188x250.jpg", tags: ["FPS", "Strzelanka"] },
-  { category: "Overwatch 2", image: "https://static-cdn.jtvnw.net/ttv-boxart/515025_IGDB-188x250.jpg", tags: ["FPS", "Strzelanka"] },
-  { category: "Podróże i rekreacja", image: "https://static-cdn.jtvnw.net/ttv-boxart/509672-188x250.jpg", tags: ["IRL"] },
-  { category: "Call of Duty: Modern Warfare II ", image: "https://static-cdn.jtvnw.net/ttv-boxart/1678052513_IGDB-188x250.jpg", tags: ["Strzelanka", "Akcja"] },
-  { category: "Fortnite", image: "https://static-cdn.jtvnw.net/ttv-boxart/33214-188x250.jpg", tags: ["Strzelanka", "Akcja"] }
-];
-
-const replace = (games) => {
-  return games.box_art_url.replace('{width}x{height}', '188x250')
+export const replace = (games: { box_art_url: string; }, size: string) => {
+  return games.box_art_url.replace('{width}x{height}', size)
 };
 
+export default function Game_card({topGames, size, style}: any) {
 
+  const width = ['w-48', 'w-72']
+  const css = 'transition-transform ease-in flex-grow flex-shrink-0 basis-auto max-w-[50%] py-0 px-2 transition-none duration-200 opacity-100 ' + width[style]
 
-export default function Game_card({topGames}: any) {
+ 
 
-
-  return <>{
-    topGames.data.map((games) => (
+  const replaceChars = (str: any) => {
+    const result = str
+      .replaceAll(' ', '%20')
+      .replaceAll(':', '%3A')
+      .replaceAll(',', '%2C')
       
-      <div className='transition-transform ease-in flex-grow flex-shrink-0 basis-auto w-48 max-w-[50%] py-0 px-2 transition-none duration-200 opacity-100' key={games.id}>
+    return result
+  }
+  
+  return <>{
+    topGames.data.map((games: { id: string; name: string; box_art_url: string; }) => (
+      <div className={css} key={games.id}>
         <div className='h-full'>
           <div className='pb-8'>
             <div>
               <div className='relative'>
                 <div className='flex flex-col flex-nowrap'>
-                  <a className='text-[#efeff1] no-underline' href='#'>
+                  <Link className='text-[#efeff1] no-underline' href={`directory/${replaceChars(games.name)}`}>
 
-                    <div className='relative '>
-                      {/* 4 animation divs */}
-                      <div className='transition-transform ease-in duration-100'>
+                    <div className='relative group'>
+                      <div className="group-hover:[transform:translateY(-0.6rem)_scale(1)] group-hover:delay-75 absolute top-0 left-0 w-0 h-0  border-t-[0.6rem] [border-top-style:solid] border-t-transparent border-b-[0.6rem] [border-bottom-style:solid] border-b-transparent border-r-[0.6rem] [border-right-style:solid] border-r-[#9147ff] [transform-origin:left_center] [transform:translateY(-0.6rem)_scale(0)] transition-transform ease-in duration-100"></div>
+                      <div className="group-hover:[transform:translateX(0.6rem)_scale(1)] group-hover:delay-75 absolute bottom-0 right-0 w-0 h-0  border-l-[0.6rem] [border-left-style:solid] border-l-transparent border-r-[0.6rem] [border-right-style:solid] border-r-transparent border-t-[0.6rem] [border-top-style:solid] border-t-[#9147ff] [transform-origin:center_bottom] [transform:translateX(0.6rem)_scale(0)] transition-transform ease-in duration-100"></div>
+                      <div className="group-hover:[transform:scaleX(1)] group-hover:delay-75 absolute top-0 bottom-0 left-0 bg-[#9147ff] [transform-origin:0px_100%] w-[0.6rem] [transform:scaleX(0)] transition-transform ease-in duration-100"></div>
+                      <div className="group-hover:[transform:scaleY(1)] group-hover:delay-75 absolute bottom-0 left-0 right-0 bg-[#9147ff] [transform-origin:0px_100%] h-[0.6rem] [transform:scaleY(0)] transition-transform ease-in duration-100"></div>
+                      
+                      <div className='hover:[transform:translate3d(0.6rem,-0.6rem,0px)] hover:delay-75 transition-transform ease-in duration-100'>
                         <div className='bg-[hsla(0,0%,100%,.05)]'>
                           <div className='bg-[hsla(0,0%,100%,.05)] transition-none duration-100 ease-in opacity-100'>
                             <div className='flex-shrink-0 bg-[hsla(0,0%,100%,.05)] overflow-hidden w-full'>
                               <div className='relative w-full overflow-hidden'>
                                 <div className='pb-[133.333%]'></div>
-                                <img alt="Obraz" className='absolute left-0 w-full min-h-full top-0 border-none max-w-full align-top' src={replace(games)}></img> 
+                                <img alt="Obraz" className='absolute left-0 w-full min-h-full top-0 border-none max-w-full align-top' src={replace(games, size)}></img> 
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <div className='relative'>
                     <div className="flex">
                       <div data-test-selector="tw-card-title" data-a-target="tw-card-title" className="overflow-ellipsis whitespace-nowrap overflow-hidden flex-grow flex-shrink mt-2">
@@ -63,7 +64,7 @@ export default function Game_card({topGames}: any) {
                     </div>
 
                     <p className="overflow-ellipsis whitespace-nowrap overflow-hidden text-[#adadb8] text-[1.3rem] leading-normal">
-                      <a data-a-target="card-0" className="hover:text-[#a970ff] no-underline text-inherit" href="#">{ }&nbsp;widzów</a>
+                      <a data-a-target="card-0" className="hover:text-[#a970ff] no-underline text-inherit" href="#">123456&nbsp;widzów</a>
                     </p>
                   </div>
                 </div>

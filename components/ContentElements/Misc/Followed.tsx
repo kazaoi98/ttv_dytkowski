@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
-import useSWR from 'swr';
 import { viewerCount } from '../../MiscFunctions/miscFunctions';
-import { posters } from './Game_card';
+
 
 
 export type Props = {
@@ -15,7 +13,7 @@ export default function Followed({ streams, users }: any) {
     return (
         <>
             {
-                streams.data.slice(0, 10).map((stream, idx) => (
+                streams.data.slice(0, 10).map((stream: any, idx: number) => (
                     <div className=' transition-transform ease-in delay-150 opacity-100 scale-100' key={stream.user_id}>
                         <div>
                             <div className='relative'>
