@@ -21,7 +21,7 @@ export default async function page({ }: Props) {
           </div>
 
           <div className='mt-8'>
-            <div className='grid-cols-[repeat(5,1fr)] grid'>
+            <div className='xl:grid-cols-[repeat(5,1fr)] lg:grid-cols-[repeat(4,1fr)] md:grid-cols-[repeat(3,1fr)] sm:grid-cols-[repeat(2,1fr)] grid'>
               <Category_card />
             </div>
           </div>

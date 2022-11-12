@@ -18,10 +18,10 @@ export default function Header({ }: Props) {
 
     const [isOpen, setIsOpen] = useState(false)
     const [preferences, toggleOpen] = useState(false)
-    
+
     return (
         <>
-            <Modal open={isOpen}/>
+            <Modal open={isOpen} />
             <Preferences_Modal open={preferences} />
             <nav className="h-20 z-[1000] flex-shrink-0 block fill-white">
                 <div className='flex shadow-[0_1px_2px_rgba(0,0,0,0.9)] bg-[#18181b] items-stretch flex-nowrap h-full'>
@@ -56,7 +56,7 @@ export default function Header({ }: Props) {
                         <a aria-label='Strona główna klona twitcha' className='visited:text-[#bf94ff] no-underline cursor-pointer' href='/'>
                             <div className='p-2 inline-flex'>
                                 <figure className='inline-flex'>
-                                    <svg className='fill-current' viewBox="0 0 40 40" width="40px" height="40px" x="0px" y="0px"  onMouseEnter={animation}>
+                                    <svg className='fill-current' viewBox="0 0 40 40" width="40px" height="40px" x="0px" y="0px" onMouseEnter={animation}>
                                         <g>
                                             <polygon points="13 8 8 13 8 31 14 31 14 36 19 31 23 31 32 22 32 8" className='fill-[#9146FF]'></polygon>
                                             <polygon points="26 25 30 21 30 10 14 10 14 25 18 25 18 29 22 25" className='fill-[#FFFFFF]'></polygon>
@@ -75,7 +75,7 @@ export default function Header({ }: Props) {
                                     <div className='flex self-center h-full'>
                                         <a className='hover:text-[#bf94ff] hover:no-underline text-[#efeff1] flex items-center text-center whitespace-nowrap no-underline' aria-label='Obserwowane' href='/directory'>
                                             <div>
-                                                <div className='flex flex-col'>
+                                                <div className='hidden md:flex flex-col'>
                                                     <div className='flex'>
                                                         <p className='leading-[1.2rem] sm:text-[1.1rem] md:text-[1.8rem] sm:font-medium md:font-semibold'>Przeglądaj</p>
                                                     </div>
@@ -95,6 +95,20 @@ export default function Header({ }: Props) {
                                                         <div className='py-[3px] px-[6px] rounded-[0.4rem] bg-white text-[#040109] hidden absolute text-[1.3rem] font-semibold leading-[1.2rem] text-left z-[2000] pointer-events-none select-none whitespace-nowrap top-0 left-2/4 translate-x-[-50%]' data-a-target="tw-tooltip-label" role="tooltip">
                                                             Przeglądaj
                                                         </div>
+                                                    </div>
+                                                </div>
+
+                                                <div aria-label="Przeglądaj" className="flex md:hidden pl-4 pr-4">
+                                                    <div className="inline-flex relative">
+                                                        <figure className="items-center inline-flex">
+                                                            <svg type="color-fill-current" width="20px" height="20px" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" className="fill-current">
+                                                                <g>
+                                                                    <path d="M5 2a2 2 0 00-2 2v8a2 2 0 002 2V4h8a2 2 0 00-2-2H5z"></path>
+                                                                    <path fill-rule="evenodd" d="M7 8a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H9a2 2 0 01-2-2V8zm2 0h6v8H9V8z" clip-rule="evenodd"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </figure>
+                                                        {/* <div className="ScAttachedTooltip-sc-v8mg6d-1 clwBTO tw-tooltip" data-a-target="tw-tooltip-label" role="tooltip">Przeglądaj</div> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -130,7 +144,7 @@ export default function Header({ }: Props) {
                         </div>
                     </div>
 
-                    <div className='flex grow-[2] flex-shrink w-full items-center justify-center'>
+                    <div className='hidden md:flex grow-[2] flex-shrink w-full items-center justify-center'>
                         <div className='basis-[40rem] relative ml-8 mr-8'>
                             <div className='max-w-[40rem]'>
                                 <div>
@@ -139,7 +153,7 @@ export default function Header({ }: Props) {
                                             <div className='flex w-full'>
                                                 <div className='flex-grow mr-px'>
                                                     <div className='relative'>
-                                                        <input className='hover:border-[hsla(0,0%,100%,.3)] focus:outline-none focus:border-[#a970ff] focus:bg-black hover:bg-[hsla(0,0%,100%,.2)] block w-full h-[3.6rem] text-[1.4rem] font-roboto  appearance-none bg-clip-padding leading-normal border-2 duration-100  ease-in border-solid border-[hsla(0,0%,100%,.2)] text-[#efeff1] bg-[hsla(0,0%,100%,.2)] rounded-l-[0.6rem] px-4 py-2' aria-label="Pole wyszukiwania" aria-haspopup="grid" type="search" placeholder="Wyszukaj" autoCapitalize="off" autoCorrect="off" autoComplete="twitch-nav-search" data-a-target="tw-input" maxLength={150} spellCheck="false" aria-owns="search-tray__container" aria-controls="search-tray__container"/>
+                                                        <input className='hover:border-[hsla(0,0%,100%,.3)] focus:outline-none focus:border-[#a970ff] focus:bg-black hover:bg-[hsla(0,0%,100%,.2)] block w-full h-[3.6rem] text-[1.4rem] font-roboto  appearance-none bg-clip-padding leading-normal border-2 duration-100  ease-in border-solid border-[hsla(0,0%,100%,.2)] text-[#efeff1] bg-[hsla(0,0%,100%,.2)] rounded-l-[0.6rem] px-4 py-2' aria-label="Pole wyszukiwania" aria-haspopup="grid" type="search" placeholder="Wyszukaj" autoCapitalize="off" autoCorrect="off" autoComplete="twitch-nav-search" data-a-target="tw-input" maxLength={150} spellCheck="false" aria-owns="search-tray__container" aria-controls="search-tray__container" />
                                                     </div>
                                                 </div>
                                                 <button aria-label='Przycisk wyszukiwania' className='bg-[hsla(0,0%,100%,.15)]  inline-flex relative items-center justify-center align-middle no-underline whitespace-nowrap select-none font-semibold rounded-r-[0.6rem] text-[1.4rem] h-[3.6rem] bg-none border-none rounded-none'>
@@ -221,7 +235,7 @@ export default function Header({ }: Props) {
                             <div data-a-target="dropdown-up" className="pl-2 relative flex flex-grow items-stretch h-full">
                                 <div className="inline-block relative">
                                     <div>
-                                        <button className="hover:bg-[hsla(0,0%,100%,.2)] hover:text-[#efeff1] inline-flex items-center justify-center select-none rounded-[0.4rem] h-12 w-12 bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap  font-[1.3rem] bg-none border-none" data-a-target="user-menu-toggle" data-test-selector="user-menu__toggle" aria-label="Menu użytkownika" onClick={() => toggleOpen(true) }>
+                                        <button className="hover:bg-[hsla(0,0%,100%,.2)] hover:text-[#efeff1] inline-flex items-center justify-center select-none rounded-[0.4rem] h-12 w-12 bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap  font-[1.3rem] bg-none border-none" data-a-target="user-menu-toggle" data-test-selector="user-menu__toggle" aria-label="Menu użytkownika" onClick={() => toggleOpen(true)}>
                                             <div className="w-8 h-8">
                                                 <div className="inline-flex items-center h-full w-full">
                                                     <div className="relative w-full overflow-hidden">

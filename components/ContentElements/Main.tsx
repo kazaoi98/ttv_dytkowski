@@ -23,26 +23,11 @@ export default function Main({ topGames, streams, users, tags }: any) {
     setMax(10)
   }
 
-  const sizeCheck = (size: { readonly width: number | null; readonly height: number | null; }) => {
 
-    if (size.width! < 900) {
-      console.log('set 4')
-      setMax(2)
-    } else if (size.width! < 1390) {
-      console.log('set 3')
-      setMax(3)
-    } else if (size.width! < 1600) {
-      console.log('set 2')
-      setMax(4)
-    }
-  };
 
 
   return (
-    <SizeMe monitorHeight refreshRate={32}>
-      {({ size }) => (
     <>
-      {sizeCheck(size)}
       <div className='h-full'>
         <div className='min-h-[35rem] transition-[padding] ease-in duration-[0.45s] pt-8 pl-12 pr-12'>
           <div className='mx-[auto] my-0 max-w-[200rem]'>
@@ -179,9 +164,6 @@ export default function Main({ topGames, streams, users, tags }: any) {
                           <span>
                             , które mogą Ci się spodobać
                           </span>
-                          <span>
-                            . {size.width}
-                          </span>
                         </h2>
                       </div>
 
@@ -245,8 +227,16 @@ export default function Main({ topGames, streams, users, tags }: any) {
 
                       <div>
                         <div className='relative'>
-                          <div className='flex min-w-full list-none my-0 mx-[-0.5rem]'>
+                          <div className='flex flex-wrap min-w-full list-none my-0 mx-[-0.5rem]'>
                             <Game_card topGames={topGames} size={'188x250'} style={0} />
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
+                            <div className="order-[32767] flex-grow flex-shrink-0 basis-auto w-[50rem] max-w-[100%] py-0 px-2"></div>
                           </div>
                         </div>
 
@@ -266,7 +256,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
                   </div>
 
                   <div className='mb-4'>
-                    <div className='grid-cols-[repeat(5,1fr)] grid'>
+                    <div className='xl:grid-cols-[repeat(5,1fr)] lg:grid-cols-[repeat(4,1fr)] md:grid-cols-[repeat(3,1fr)] sm:grid-cols-[repeat(2,1fr)] grid'>
                       <Category_card />
 
                     </div>
@@ -281,6 +271,5 @@ export default function Main({ topGames, streams, users, tags }: any) {
       </div>
 
     </>
-      )}</SizeMe>
   )
 }
