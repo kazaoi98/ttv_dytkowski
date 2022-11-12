@@ -23,12 +23,24 @@ export default function Main({ topGames, streams, users, tags }: any) {
     setMax(10)
   }
 
+  const sizeCheck = (size: { readonly width: number | null; readonly height: number | null; }) => {
+    if (!size) return
+    
+    if (size.width! < 1700) {
+      setMax(4)
+    } else if (size.width! < 1490) {
+      setMax(3)
+    } else if (size.width! < 1000) {
+      setMax(2)
+    }
+  };
+
 
   return (
-    <SizeMe monitorHeight>
+    <SizeMe monitorHeight refreshRate={32}>
       {({ size }) => (
     <>
-
+      {sizeCheck(size)}
       <div className='h-full'>
         <div className='min-h-[35rem] transition-[padding] ease-in duration-[0.45s] pt-8 pl-12 pr-12'>
           <div className='mx-[auto] my-0 max-w-[200rem]'>
