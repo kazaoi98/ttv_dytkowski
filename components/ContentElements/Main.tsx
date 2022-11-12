@@ -187,7 +187,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
 
                       <div>
                         <div className='relative'>
-                          <div className="flex min-w-full list-none mx-[-0.5rem] my-0">
+                          <div className="flex flex-wrap min-w-full list-none my-0 mx-[-0.5rem]">
 
                             <Card streams={streams} users={users} max={max} />
                             {/* <LoadingSkeleton /> */}
