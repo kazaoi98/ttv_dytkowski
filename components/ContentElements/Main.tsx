@@ -24,16 +24,16 @@ export default function Main({ topGames, streams, users, tags }: any) {
   }
 
   const sizeCheck = (size: { readonly width: number | null; readonly height: number | null; }) => {
-    console.log(size.width)
-    if (size.width! < 1700) {
+
+    if (size.width! < 900) {
       console.log('set 4')
-      setMax(4)
-    } else if (size.width! < 1490) {
+      setMax(2)
+    } else if (size.width! < 1390) {
       console.log('set 3')
       setMax(3)
-    } else if (size.width! < 1000) {
+    } else if (size.width! < 1600) {
       console.log('set 2')
-      setMax(2)
+      setMax(4)
     }
   };
 
