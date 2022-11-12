@@ -24,13 +24,15 @@ export default function Main({ topGames, streams, users, tags }: any) {
   }
 
   const sizeCheck = (size: { readonly width: number | null; readonly height: number | null; }) => {
-    if (!size) return
-    
+    console.log(size.width)
     if (size.width! < 1700) {
+      console.log('set 4')
       setMax(4)
     } else if (size.width! < 1490) {
+      console.log('set 3')
       setMax(3)
     } else if (size.width! < 1000) {
+      console.log('set 2')
       setMax(2)
     }
   };
@@ -185,7 +187,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
 
                       <div>
                         <div className='relative'>
-                          <div className="flex flex-wrap min-w-full list-none mx-[-0.5rem] my-0">
+                          <div className="flex min-w-full list-none mx-[-0.5rem] my-0">
 
                             <Card streams={streams} users={users} max={max} />
                             {/* <LoadingSkeleton /> */}
