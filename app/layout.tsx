@@ -18,7 +18,7 @@ export const getData = async (url: string, token: string, client_id: string) => 
             'Client-Id': client_id
 
         },
-        cache: "no-cache"
+        next: { revalidate: 100 }
     }
 
     const promise = fetch(url, options);
