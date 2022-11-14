@@ -16,7 +16,7 @@ export default function Sidenav({ streams, users }: any) {
                                     {/*  */}
                                     <div className='hidden lg:inline-flex transition-transform duration-[0.25s] w-20  justify-center mt-2 mb-2 pt-2 pb-2 absolute top-0 right-0 flex-grow-0 flex-shrink-0 z-[10]'>
                                         <div className='inline-flex'>
-                                            <button className="hover:bg-[hsla(0,0%,100%,.2)] inline-flex items-center justify-center select-none rounded-[0.4rem] h-12 w-12 bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap font-semibold text-[1.3rem] bg-none border-none" data-test-selector="side-nav__visibility-toggle" aria-label="Zwiń boczną nawigację" data-a-target="side-nav-arrow">
+                                            <button disabled className="disabled:cursor-not-allowed hover:bg-[hsla(0,0%,100%,.2)] inline-flex items-center justify-center select-none rounded-[0.4rem] h-12 w-12 bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap font-semibold text-[1.3rem] bg-none border-none" data-test-selector="side-nav__visibility-toggle" aria-label="Zwiń boczną nawigację" data-a-target="side-nav-arrow">
                                                 <div className='w-8 h-8'>
                                                     <div className='inline-flex items-center h-full w-full'>
                                                         <div className='relative w-full overflow-hidden'>
@@ -72,8 +72,5 @@ export default function Sidenav({ streams, users }: any) {
         </div>
 
     )
-}
-function useResizeDetector(arg0: { onResize: any; }): { ref: any; width: any; height: any; } {
-    throw new Error('Function not implemented.');
 }
 

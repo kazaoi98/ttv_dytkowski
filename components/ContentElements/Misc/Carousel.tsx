@@ -19,7 +19,7 @@ export default function Carousel({ streams, users }: any) {
 
                     <div className='bg-[#0e0e10] absolute left-0 z-10 rounded-[0.6rem]'>
                         <div className='flex items-center content-center justify-center'>
-                            <button disabled className=' hover:bg-[hsla(0,0%,100%,.2)]  inline-flex items-center justify-center select-none rounded-[0.6rem] h-[3.6rem] w-[3.6rem] bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap font-semibold text-[1.4rem] bg-none border-none'>
+                            <button disabled className='disabled:cursor-not-allowed hover:bg-[hsla(0,0%,100%,.2)]  inline-flex items-center justify-center select-none rounded-[0.6rem] h-[3.6rem] w-[3.6rem] bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap font-semibold text-[1.4rem] bg-none border-none'>
                                 <div className='w-[2.4rem] h-[2.4rem]'>
                                     <div className='inline-flex items-center h-full w-full'>
                                         <div className='relative w-full overflow-hidden'>
@@ -38,7 +38,7 @@ export default function Carousel({ streams, users }: any) {
 
                     <div className='bg-[#0e0e10] absolute right-0 z-10 rounded-[0.6rem]'>
                         <div className='flex items-center justify-center'>
-                            <button disabled className='  hover:bg-[hsla(0,0%,100%,.2)] inline-flex items-center justify-center select-none rounded-[0.6rem] h-[3.6rem] w-[3.6rem] bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap font-semibold text-[1.4rem] bg-none border-none'>
+                            <button disabled className='disabled:cursor-not-allowed  hover:bg-[hsla(0,0%,100%,.2)] inline-flex items-center justify-center select-none rounded-[0.6rem] h-[3.6rem] w-[3.6rem] bg-transparent text-[#efeff1] relative align-middle overflow-hidden no-underline whitespace-nowrap font-semibold text-[1.4rem] bg-none border-none'>
                                 <div className='w-[2.4rem] h-[2.4rem]'>
                                     <div className='inline-flex items-center h-full w-full'>
                                         <div className='relative w-full overflow-hidden'>

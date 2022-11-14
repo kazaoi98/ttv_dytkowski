@@ -56,12 +56,13 @@ export default function Card({ streams, users, max }: any) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='relative'>
-                                                {/*  */}
-                                                {/*  */}
-                                                {/*  */}
-                                                {/*  */}
-                                                <div className='transition-transform ease-in duration-100'>
+                                            <div className='relative group'>
+                                                <div className="group-hover:[transform:translateY(-0.6rem)_scale(1)] group-hover:delay-75 absolute top-0 left-0 w-0 h-0 border-t-[0.6rem] [border-top-style:solid] border-t-transparent border-b-[0.6rem] [border-bottom-style:solid] border-b-transparent border-r-[0.6rem] [border-right-style:solid] border-r-[#9147ff] [transform-origin:left_center] [transform:translateY(-0.6rem)_scale(0)] transition-transform ease-in duration-100"></div>
+                                                <div className="group-hover:[transform:translateX(0.6rem)_scale(1)] group-hover:delay-75 absolute bottom-0 right-0 w-0 h-0 border-l-[0.6rem] [border-left-style:solid] border-l-transparent border-r-[0.6rem] [border-right-style:solid] border-r-transparent border-t-[0.6rem] [border-top-style:solid] border-t-[#9147ff] [transform-origin:center_bottom] [transform:translateX(0.6rem)_scale(0)] transition-transform ease-in duration-100"></div>
+                                                <div className="group-hover:[transform:scaleX(1)] group-hover:delay-75 absolute top-0 bottom-0 left-0  bg-[#9147ff] [transform-origin:0px_100%] w-[0.6rem] [transform:scaleX(0)] transition-transform ease-in duration-100"></div>
+                                                <div className="group-hover:[transform:scaleY(1)] group-hover:delay-75 absolute right-0 bottom-0 left-0  bg-[#9147ff] [transform-origin:0px_100%] h-[0.6rem] [transform:scaleY(0)] transition-transform ease-in duration-100"></div>
+
+                                                <div className='hover:[transform:translate3d(0.6rem,-0.6rem,0px)] hover:delay-75 transition-transform ease-in duration-100'>
                                                     <a className='no-underline text-[#bf94ff]' href={`https://www.twitch.tv/${info.user_name}`}>
                                                         <div className='text-white relative'>
                                                             <div className='relative w-full overflow-hidden'>

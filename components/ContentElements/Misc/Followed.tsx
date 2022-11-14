@@ -17,7 +17,7 @@ export default function Followed({ streams, users }: any) {
                     <div className=' transition-transform ease-in delay-150 opacity-100 scale-100' key={stream.user_id}>
                         <div>
                             <div className='relative'>
-                                <a className='hover:bg-[#26262c] h-[4.2rem] no-underline text-[#bf94ff] px-4 py-2 flex items-center flex-nowrap w-full' href="/example">
+                                <a className='hover:bg-[#26262c] h-[4.2rem] no-underline text-[#bf94ff] px-4 py-2 flex items-center flex-nowrap w-full' href={`https://www.twitch.tv/${stream.user_name}`}>
                                     <div className='flex-shrink-0 items-center'>
                                         <figure aria-label='example' className='relative bg-inherit w-12 h-12 block'>
                                             <img className="block rounded-[9000px] w-full border-none max-w-full align-top" alt="meduska" src={users.data[idx].profile_image_url}></img>
