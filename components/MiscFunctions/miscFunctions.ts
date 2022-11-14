@@ -12,3 +12,7 @@ export const viewerCount = (count: number) => {
     return item ? (count / item.value).toFixed(1).replace(rx, "$1") + item.symbol : "0";
 
 }
+
+export const replace = (games: { box_art_url: string; }, size: string) => {
+    return games.box_art_url.replace('{width}x{height}', size)
+};

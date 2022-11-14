@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Sort_element from '../../../../components/ContentElements/Misc/Sort_element';
 import { getData, getMultiple } from '../../../layout';
 import Card from '../../../../components/ContentElements/Misc/Card';
-import { replace } from '../../../../components/ContentElements/Misc/Game_card';
+import { replace } from '../../../../components/MiscFunctions/miscFunctions';
+
 
 type Props = {
     params: {

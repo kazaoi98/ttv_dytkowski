@@ -31,7 +31,7 @@ export default function Main({ topGames, streams, users, tags }: any) {
     <>
       <div className='h-full'>
         
-        <Carousel streams={streams} />
+        <Carousel streams={streams} users={users} />
 
         <div className='ml-12 mr-12'>
           <div className='mx-auto my-0 max-w-[200rem]'>

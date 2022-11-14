@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import React from 'react'
+import { replace } from '../../MiscFunctions/miscFunctions';
 
 
-export const replace = (games: { box_art_url: string; }, size: string) => {
-  return games.box_art_url.replace('{width}x{height}', size)
-};
+
 
 export default function Game_card({ topGames, size, style }: any) {
 
