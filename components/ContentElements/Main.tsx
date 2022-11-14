@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Card from './Misc/Card';
 import Game_card from './Misc/Game_card';
 import Category_card from './Misc/Category_card';
-import { SizeMe } from "react-sizeme";
+
 
 type Props = {}
 

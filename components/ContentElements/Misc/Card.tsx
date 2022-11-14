@@ -62,7 +62,7 @@ export default function Card({ streams, users, max }: any) {
                                                 {/*  */}
                                                 {/*  */}
                                                 <div className='transition-transform ease-in duration-100'>
-                                                    <a className='no-underline text-[#bf94ff]' href='#'>
+                                                    <a className='no-underline text-[#bf94ff]' href={`https://www.twitch.tv/${info.user_name}`}>
                                                         <div className='text-white relative'>
                                                             <div className='relative w-full overflow-hidden'>
                                                                 <div className='pb-[56.25%]'></div>

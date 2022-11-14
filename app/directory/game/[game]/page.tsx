@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image';
-import Sort_element from '../../../components/ContentElements/Misc/Sort_element';
-import { getData, getMultiple } from '../../layout';
-import Card from '../../../components/ContentElements/Misc/Card';
-import { replace } from '../../../components/ContentElements/Misc/Game_card';
+import Sort_element from '../../../../components/ContentElements/Misc/Sort_element';
+import { getData, getMultiple } from '../../../layout';
+import Card from '../../../../components/ContentElements/Misc/Card';
+import { replace } from '../../../../components/ContentElements/Misc/Game_card';
 
 type Props = {
     params: {
@@ -141,7 +141,7 @@ async function Game({ params: { game } }: Props) {
                         <div className='relative flex h-16 w-full'>
                             <ul className='flex-grow flex h-full items-center justify-start text-[1.8rem] flex-wrap list-none'>
                                 <li role="presentation" className='flex-grow-0 items-center justify-center h-full list-inside'>
-                                    <a data-a-target="game-directory-live-tab" role="tab" aria-selected="true" className="block h-full w-full text-inherit pl-0 pr-4 no-underline" href={`/directory/${game}`}>
+                                    <a data-a-target="game-directory-live-tab" role="tab" aria-selected="true" className="block h-full w-full text-inherit pl-0 pr-4 no-underline" href={`/directory/game/${game}`}>
                                         <div className="text-[#bf94ff] h-full text-left flex flex-col">
                                             <div className="flex justify-center flex-col flex-grow">
                                                 <p className="font-roboto leading-[1.2] text-[1.8rem] font-semibold">Kanały na żywo</p>
